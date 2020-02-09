@@ -9,7 +9,13 @@ module.exports = {
 				type: Sequelize.INTEGER
 			},
 			name: {
-				type: Sequelize.STRING
+				type: Sequelize.STRING,
+				allowNull: false,
+				unique: true
+			},
+			slotNums: {
+				type: Sequelize.INTEGER,
+				defaultValue: 1
 			},
 			createdAt: {
 				allowNull: false,

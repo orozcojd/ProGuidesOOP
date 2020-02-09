@@ -5,6 +5,10 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false,
 			unique: true
+		},
+		slotNums: {
+			type: DataTypes.INTEGER,
+			defaultValue: 1
 		}
 	}, {});
 	SlotType.associate = function(models) {

@@ -1,32 +1,32 @@
-const Item = require('../models').Item;
-const SlotType = require('../models').SlotType;
-const ItemStat = require('../models').ItemStat;
-const StatType = require('../models').StatType;
+const { Item } = require('../models');
+const { SlotType } = require('../models');
+const { ItemStat } = require('../models');
+const { StatType } = require('../models');
 
 
 module.exports = {
-	async getFullItems(req, res) {
+  async getFullItems(req, res) {
     try {
-      const slotTypes = await SlotType.findAll({raw: true});
+      const slotTypes = await SlotType.findAll({ raw: true });
       const items = await ItemStat.findAll({
         // raw: true,
-        include:[{
+        include: [{
           model: Item,
-          required: true
+          required: true,
         },
         {
           model: StatType,
-          required: true
-        }]
+          required: true,
+        }],
       });
-      const payload = items.map(v => ({
+      const payload = items.map((v) => ({
         itemStat: v,
-        slotType: slotTypes.find(slot => slot.id === v.Item.SlotTypeID)
-      }))
-      res.status(201).send(payload)
+        slotType: slotTypes.find((slot) => slot.id === v.Item.SlotTypeID),
+      }));
+      res.status(201).send(payload);
     } catch (err) {
-      console.log(err)
-      res.status(401).send(err)
+      console.log(err);
+      res.status(401).send(err);
     }
-	}
+  },
 };

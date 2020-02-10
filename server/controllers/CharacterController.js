@@ -1,7 +1,9 @@
-const { Item } = require('../models');
-const { SlotType } = require('../models');
-const { Character } = require('../models');
-const { CharacterSlot } = require('../models');
+const {
+  SlotType,
+  Character,
+  CharacterSlot,
+} = require('../models');
+
 
 module.exports = {
   async create(req, res) {
@@ -14,7 +16,7 @@ module.exports = {
       const characterSlots = [];
       const slotTypes = await SlotType.findAll();
       for (const slotType of slotTypes) {
-        for (let i = 0; i < slotType.slotNums; i++) {
+        for (let i = 0; i < slotType.slotNums; i += 1) {
           const cSlot = await CharacterSlot.create({
             CharacterID: character.id,
             SlotTypeID: slotType.id,

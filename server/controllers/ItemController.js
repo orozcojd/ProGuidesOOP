@@ -1,7 +1,10 @@
-const { Item } = require('../models');
-const { SlotType } = require('../models');
-const { ItemStat } = require('../models');
-const { StatType } = require('../models');
+const {
+  Item,
+  SlotType,
+  ItemStat,
+  StatType,
+} = require('../models');
+
 
 module.exports = {
   async create(req, res) {
@@ -24,6 +27,7 @@ module.exports = {
         SlotTypeID: slot.id,
       });
       const itemStats = [];
+
       for (const stat of stats) {
         const statType = await StatType.findByPk(stat.id);
         // foreign key constraint

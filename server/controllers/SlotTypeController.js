@@ -8,7 +8,7 @@ module.exports = {
         name: slot.name,
         slotNums: slot.slotNums,
       })
-        .then((slot) => slotTypes.push(slot))
+        .then((s) => slotTypes.push(s))
         .catch((err) => res.status(400).send(err));
     }
     res.status(201).send(slotTypes);

@@ -1,15 +1,15 @@
-const { Item } = require('../models');
-const { SlotType } = require('../models');
-const { ItemStat } = require('../models');
-const { StatType } = require('../models');
-
+const {
+  Item,
+  SlotType,
+  ItemStat,
+  StatType,
+} = require('../models');
 
 module.exports = {
   async getFullItems(req, res) {
     try {
       const slotTypes = await SlotType.findAll({ raw: true });
       const items = await ItemStat.findAll({
-        // raw: true,
         include: [{
           model: Item,
           required: true,
@@ -25,7 +25,7 @@ module.exports = {
       }));
       res.status(201).send(payload);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       res.status(401).send(err);
     }
   },

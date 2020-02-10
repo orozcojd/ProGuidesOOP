@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "811ec8d9-0fe5-4a18-b779-ae93009ccd07",
+		"name": "ProGuides",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/stat",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"stat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stat by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/stat/3",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"stat",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"stats\": [\n\t\t\"STAMINA\",\n\t\t\"CRITICAL_STRIKE_RATING\",\n\t\t\"HASTE_RATING\",\n\t\t\"MASTERY_RATING\",\n\t\t\"VERSATILITY_RATING\"\n\t\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/stat",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"stat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "slotType",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"slotTypes\": [\n\t\t{\n\t\t\t\"name\": \"HELM\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"SHOULDER\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"CLOAK\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"CHEST\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"BRACER\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"GLOVE\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"BELT\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"LEGS\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"BOOT\"\n\t\t},\n\t\t{\n\t\t\t\"name\":\"RING\",\n\t\t\t\"slotNums\": 2\n\t\t},\n\t\t{\n\t\t\t\"name\": \"TRINKET\",\n\t\t\t\"slotNums\": 2\n\t\t},\n\t\t{\n\t\t\t\"name\": \"WEAPON\",\n\t\t\t\"slotNums\": 2\n\t\t}\n\t\t\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/slots",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"slots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "slotType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/slots",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"slots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Notorious Gladiator's Plate Gloves\",\n\t\"slotType\": {\n\t\t\"name\": \"GLOVE\",\n\t\t\"id\": 38\n\t},\n\t\"stats\": [\n\t\t{\n\t\t\t\"name\": \"STRENGTH\",\n\t\t\t\"id\": 4,\n\t\t\t\"baseAttr\": 1,\n\t\t\t\"value\": 375\n\t\t},\n\t\t{\n\t\t\t\"name\": \"STAMINA\",\n\t\t\t\"id\": 5,\n\t\t\t\"baseAttr\": 1,\n\t\t\t\"value\": 673\n\t\t},\n\t\t{\n\t\t\t\"name\": \"CRITICAL_STRIKE_RATING\",\n\t\t\t\"id\": 6,\n\t\t\t\"baseAttr\": 1,\n\t\t\t\"value\": 68\n\t\t},\n\t\t{\n\t\t\t\"name\": \"VERSATILITY_RATING\",\n\t\t\t\"id\": 9,\n\t\t\t\"baseAttr\": 1,\n\t\t\t\"value\": 149\n\t\t}\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/items",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/items/",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "item by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/items/13",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"items",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "characters",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Alezha\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/characters",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/characters/",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"characters",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detailed items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/itemsDetailed",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"itemsDetailed"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

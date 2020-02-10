@@ -1,0 +1,101 @@
+{
+	"name": "Seal of Dath'Remar",
+	"slotType": {
+		"name": "RING",
+		"id": 10
+	},
+	"stats": [
+		{
+			"name": "STAMINA",
+			"id": 5,
+			"baseAttr": 1,
+			"value": 592
+		},
+		{
+			"name": "CRITICAL_STRIKE_RATING",
+			"id": 6,
+			"baseAttr": 1,
+			"value": 246
+		},
+		{
+			"name": "HASTE_RATING",
+			"id": 7,
+			"baseAttr": 1,
+			"value": 292
+		}
+	]
+}
+
+{
+	"name": "Corrupted Gladiator's Greatsword",
+	"slotType": {
+		"name": "WEAPON",
+		"id": 44
+	},
+	"stats": [
+		{
+			"name": "CRITICAL_STRIKE_RATING",
+			"id": 6,
+			"baseAttr": 1,
+			"value": 1859
+		},
+		{
+			"name": "HASTE_RATING",
+			"id": 7,
+			"baseAttr": 1,
+			"value": 68
+		},
+		{
+			"name": "STRENGTH",
+			"id": 4,
+			"baseAttr": 1,
+			"value": 549
+		},
+		{
+			"name": "MASTERY_RATING",
+			"id": 8,
+			"baseAttr": 1,
+			"value": 232
+		},
+		{
+			"name": "STAMINA",
+			"id": 5,
+			"baseAttr": 1,
+			"value": 999
+		}
+	]
+}
+
+{
+	"name": "Notorious Gladiator's Plate Gloves",
+	"slotType": {
+		"name": "GLOVE",
+		"id": 38
+	},
+	"stats": [
+		{
+			"name": "STRENGTH",
+			"id": 4,
+			"baseAttr": 1,
+			"value": 375
+		},
+		{
+			"name": "STAMINA",
+			"id": 5,
+			"baseAttr": 1,
+			"value": 673
+		},
+		{
+			"name": "CRITICAL_STRIKE_RATING",
+			"id": 6,
+			"baseAttr": 1,
+			"value": 68
+		},
+		{
+			"name": "VERSATILITY_RATING",
+			"id": 9,
+			"baseAttr": 1,
+			"value": 149
+		}
+	]
+}

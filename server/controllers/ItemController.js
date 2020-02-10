@@ -22,11 +22,8 @@ module.exports = {
 			SlotTypeID: slot.id
 		})
 		const itemStats = []
-		for(const stat of stats) {
-			const statType = await StatType.findOne({
-				id: stat.id,
-				name: stat.name
-			})
+		for(let stat of stats) {
+			const statType = await StatType.findByPk(stat.id)
 			// foreign key constraint
 			if(!statType) return res.status(401).send({
 				message: `Oops! StatType resource ${stat.name} does not exist.`
@@ -55,7 +52,7 @@ module.exports = {
 	},
 	getById(req, res) {
 		return Item.findByPk(req.params.itemId)
-			.then(slot => res.status(201).send(slot))
+			.then(item => res.status(201).send(item))
 			.catch(err => res.status(400).send(err));
 	}
 };

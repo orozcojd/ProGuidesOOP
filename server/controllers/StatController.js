@@ -12,8 +12,13 @@ module.exports = {
 		}
 		res.status(201).send(stats);
 	},
+	get(req, res) {
+		Stat.findAll()
+		.then(stat => res.status(201).send(stat))
+		.catch(err => res.status(400).send(err));
+	},
 	getById(req, res) {
-		return Stat.findByPk(req.params.statId)
+		Stat.findByPk(req.params.statId)
 			.then(stat => res.status(201).send(stat))
 			.catch(err => res.status(400).send(err));
 	}

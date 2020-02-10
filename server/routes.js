@@ -4,6 +4,8 @@ const ItemController = require('./controllers/ItemController');
 const StatController = require('./controllers/StatController');
 const SlotTypeController = require('./controllers/SlotTypeController');
 const CharacterController = require('./controllers/CharacterController');
+const ItemStatsSlotsController = require('./controllers/ItemStatsSlotsController');
+
 
 module.exports = (app) => {
 	app.get('/api', (req, res) => res.status(200).send({
@@ -14,6 +16,9 @@ module.exports = (app) => {
 		StatController.create);
 	app.get('/api/stat/:statId',
 		StatController.getById);
+	app.get('/api/stat',
+		StatController.get);
+
 
 	/* slotType routes */
 	app.post('/api/slots',
@@ -39,4 +44,7 @@ module.exports = (app) => {
 	app.get('/api/characters/:characterId',
 		CharacterController.getById);
 
+
+	app.get('/api/itemsDetailed',
+		ItemStatsSlotsController.getFullItems);
 };

@@ -114,9 +114,10 @@ CharacterEvents
 
 ### Server
 
-Install MySQL
+Install MySQL and start
 ```
-brew install mysql
+$ brew install mysql
+$ brew services start mysql
 ```
 
 ```
@@ -133,5 +134,5 @@ $ npm run start
 # navigate to client folder and install dependencies
 $ cd client
 $ npm install
-$ npm run start
+$ node script.js
 ```
